@@ -1,7 +1,7 @@
 package ro.jtonic.tutorials.kt.coursera.courses.one.w2
 
 import io.kotlintest.shouldBe
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import ro.jtonic.tutorials.kt.coursera.courses.one.w2.Week2Test.Gender.FEMALE
 import ro.jtonic.tutorials.kt.coursera.courses.one.w2.Week2Test.Gender.MALE
 import ro.jtonic.tutorials.kt.coursera.eq

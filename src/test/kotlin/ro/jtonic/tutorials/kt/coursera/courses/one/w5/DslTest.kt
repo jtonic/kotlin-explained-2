@@ -1,7 +1,7 @@
 package ro.jtonic.tutorials.kt.coursera.courses.one.w5
 
 import io.kotlintest.shouldBe
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 /**
  * Created by Antonel Ernest Pazargic on 2018-11-09.

@@ -58,6 +58,23 @@ dependencies {
     compile("io.arrow-kt:arrow-effects:${Versions.arrow}")
     testCompile("io.kotlintest:kotlintest-runner-jvm:${Versions.kotlinTest}")
     testCompile("io.kotlintest:kotlintest-runner-junit5:${Versions.kotlinTest}")
-    testCompile("io.kotlintest:kotlintest-runner-junit4:${Versions.kotlinTest}")
     testCompile("io.kotlintest:kotlintest-assertions:${Versions.kotlinTest}")
+
+    testCompile(group = "org.junit.jupiter", name =  "junit-jupiter-api", version = Versions.junit)
+    testRuntimeOnly(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = Versions.junit)
+}
+
+configurations.all {
+  resolutionStrategy {
+    failOnVersionConflict()
+    preferProjectModules()
+
+    force(
+      "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}",
+      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}",
+      "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}",
+      "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}",
+      "org.jetbrains.kotlin:kotlin-stdlib-common:${Versions.kotlin}"
+    )
+  }
 }

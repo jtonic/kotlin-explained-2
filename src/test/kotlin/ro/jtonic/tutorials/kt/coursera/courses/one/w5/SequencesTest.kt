@@ -1,7 +1,7 @@
 package ro.jtonic.tutorials.kt.coursera.courses.one.w5
 
-import org.junit.Test
 import java.util.*
+import org.junit.jupiter.api.Test
 import kotlin.coroutines.experimental.buildSequence
 
 /**
