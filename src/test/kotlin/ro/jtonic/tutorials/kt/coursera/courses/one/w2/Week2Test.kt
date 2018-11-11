@@ -4,7 +4,7 @@ import io.kotlintest.shouldBe
 import org.junit.jupiter.api.Test
 import ro.jtonic.tutorials.kt.coursera.courses.one.w2.Week2Test.Gender.FEMALE
 import ro.jtonic.tutorials.kt.coursera.courses.one.w2.Week2Test.Gender.MALE
-import ro.jtonic.tutorials.kt.coursera.eq
+import ro.jtonic.tutorials.kt.kotlinexplained.eq
 
 /**
  * Created by Antonel Ernest Pazargic on 04/11/2018.

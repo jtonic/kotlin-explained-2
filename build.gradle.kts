@@ -26,11 +26,11 @@ tasks {
     }
     withType<KotlinCompile> {
         kotlinOptions {
-            jvmTarget = "1.8"
+            jvmTarget = Versions.jvmTarget
             incremental = true
             suppressWarnings = true
-            apiVersion = "1.2"
-            languageVersion = "1.2"
+            apiVersion = Versions.kotlinApi
+            languageVersion = Versions.kotlinApi
             javaParameters = true
             freeCompilerArgs = listOf("-Xdisable-default-scripting-plugin", "-Xjsr305=strict", "-Xjvm-default=enable")
         }
@@ -41,9 +41,9 @@ tasks {
     }
 
     withType<Wrapper> {
-        gradleVersion = Versions.gradleVersion
+        gradleVersion = Versions.gradle
         distributionType = Wrapper.DistributionType.ALL
-        distributionUrl = "http://services.gradle.org/distributions/gradle-${Versions.gradleVersion}-all.zip"
+        distributionUrl = "http://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
     }
 }
 
@@ -53,6 +53,7 @@ repositories {
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}")
+    compile("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:${Versions.kotlinCoroutines}")
     compile("io.arrow-kt:arrow-syntax:${Versions.arrow}")
     compile("io.arrow-kt:arrow-optics:${Versions.arrow}")
     compile("io.arrow-kt:arrow-effects:${Versions.arrow}")
