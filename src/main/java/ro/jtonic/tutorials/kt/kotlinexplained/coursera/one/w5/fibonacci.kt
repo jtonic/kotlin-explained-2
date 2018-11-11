@@ -1,17 +1,12 @@
-package ro.jtonic.tutorials.kt.coursera.courses.one.w5
+package ro.jtonic.tutorials.kt.kotlinexplained.coursera.one.w5
 
 import ro.jtonic.tutorials.kt.kotlinexplained.eq
 
 fun fibonacci(): Sequence<Int> = sequence {
-    var a = 0
-    yield(a)
-    var b = 1
-    yield(b)
+    var pair = 0 to 1
     while(true) {
-        val c = a + b
-        a = b
-        b = c
-        yield(c)
+        yield(pair.first)
+        pair = pair.second to (pair.first + pair.second)
     }
 }
 
