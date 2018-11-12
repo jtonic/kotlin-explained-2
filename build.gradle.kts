@@ -16,10 +16,6 @@ configure<JavaPluginConvention> {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-configure<KotlinProjectExtension> {
-    experimental.coroutines = Coroutines.ENABLE
-}
-
 tasks {
     withType<JavaCompile> {
         options.encoding = Charsets.UTF_8.name()
